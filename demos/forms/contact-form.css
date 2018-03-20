@@ -1,0 +1,59 @@
+ 
+fieldset {
+  border: dashed 1px black;
+  border-radius: 15px;
+}
+
+legend {
+  color: tomato;
+  font-weight: 900;
+}
+
+label {
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+}
+fieldset:nth-child(1) label {
+  /* ... */
+}
+input, textarea {
+  width: 65%;
+}
+
+input:valid, textarea:valid {
+  background-color: green;
+}
+input:invalid, textarea:invalid {
+  background-color: red;
+}
+
+[type="number"]:invalid {
+  background-color: yellow;
+}
+
+[type="number"]:valid {
+  background-color: blue;
+  color: grey;
+}
+
+
+[type] {
+  border: solid 5px yellow;
+}
+
+input:focus, textarea:focus, :focus {
+  color: pink;
+}
+
+#name {
+  height: 50px;
+}
+/* RESUME:
+ * balise: tr, h1, p
+ * class: .class_name, .class-1
+ * id: #ident
+ * :hover, :focus
+ * :nth-child, nth-last-child, 
+ * [attr], [attr=value]: [type], [type=email]
+ */

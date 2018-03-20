@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form id="todo">
+      <input type="text" name="item" />
+    </form>
+    <select multiple id="items">
+    </select>
+  <script>
+    let todo = document.getElementById("todo");
+    let items = document.getElementById("items");
+if (localStorage.todo) {
+  let its = JSON.parse(localStorage.todo);
+  for (const it of its) {
+    const opt = document.createElement("option");
+    opt.text = it;
+    items.add(opt);
+  }
+}
+todo.addEventListener("submit", function(evt) {
+  evt.preventDefault();
+    const opt = document.createElement("option");
+  opt.text = evt.target.item.value;
+    items.add(opt);
+  let its = JSON.parse(localStorage.todo);
+  its.push(evt.target.item.value);
+  localStorage.todo = JSON.stringify(its);
+});
+items.addEventListener("dblclick", function(evt) {
+
+  let its = JSON.parse(localStorage.todo);
+  for(const opt of items.selectedOptions) {
+    its = its.filter(it => it != opt.text);
+    opt.remove();
+  }
+  localStorage.todo = JSON.stringify(its);
+});
+    </script>
+  </body>
+</html>

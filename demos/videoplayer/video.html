@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Video Player</title>
+</head>
+
+<body>
+    <video id="vid" src="./what-is-html5.mp4"></video>
+    <button id="play">Play / Pause</button>
+    <input type="range" id="vol" />
+    <input type="file" id="picker" accept="video/*" />
+    <script>
+        const v = document.getElementById("vid");
+        const b = document.getElementById("play");
+        const vol = document.getElementById("vol");
+        const picker = document.getElementById("picker");
+        vol.addEventListener("change", function() {
+            v.volume = vol.valueAsNumber / 100;
+        });
+        picker.addEventListener("change", function() {
+            v.src = URL.createObjectURL(picker.files[0]);
+        });
+        b.addEventListener("click", function() {
+            console.log("Video state", v.paused);
+            if (v.paused) {
+                v.play();
+            } else {
+                v.pause();
+            }
+        });
+    </script>
+</body>
+
+</html
