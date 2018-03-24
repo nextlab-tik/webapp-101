@@ -12,6 +12,27 @@ This repository is composed from:
 - Assets needed for the training under [assets](assets/) folder.
 - Third-party libs needed for the demos under [libs](libs/) folder.
 
+**Links:**
+
+- HTML5 & CSS3:
+
+  - [Open Class Room HTML5 Tutorial](https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3)
+    (French)
+  - [Mozilla Developer Network](https://developer.mozilla.org/en-US/):
+
+    - [Web Docs](https://developer.mozilla.org/en-US/docs/Web)
+
+  - [Bootstrap 4 Doc](https://getbootstrap.com/docs/4.0/)
+  - [Font Awesome](https://fontawesome.com/icons)
+
+- JavaScript:
+
+  - [Open Class Room JavaScript Tutorial](https://openclassrooms.com/courses/dynamisez-vos-sites-web-avec-javascript)
+    (French)
+  - [Mozilla Developer Network](https://developer.mozilla.org/en-US/):
+
+    - [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 Self Promotion
 --------------
 
